@@ -31,9 +31,10 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard'>
-        {console.log(this.state)}
-        {console.log(this.props)}
+        <h2>create a note.</h2>
         <NoteForm handleNoteCreate={this.addNote} />
+        
+        <h2>notes.</h2>
         <NoteList notes={this.props.app.state.notes} />
       </div>
     );

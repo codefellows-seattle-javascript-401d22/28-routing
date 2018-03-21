@@ -10,15 +10,16 @@ export default class NoteList extends Component {
 
   render() {
     return (
-      <div id="results">
-        {this.props.notes ? 
+      <div className='note-list'>
+        {this.props.notes.length >= 1 ? 
           <section>
             <ul>
               {console.log(this.props)}
               {this.props.notes.map((note, i) => {
                 return (
                   <li key={i}>
-                    <p>{note.title}</p>
+                    <h3>{note.title}</h3>
+                    <p>{note.content}</p>
                   </li>
                 );
               }
@@ -26,15 +27,8 @@ export default class NoteList extends Component {
             </ul>
           </section>
           :
-          undefined
+          <h4>Womp womp. No notes here.</h4>
         }
-        {/* {this.props.error ?
-          <section>
-            <h2>Womp womp. Please try searching again.</h2>
-          </section>
-          :
-          undefined
-        } */}
       </div>
     );
   }

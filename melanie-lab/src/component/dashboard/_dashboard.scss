@@ -1,0 +1,9 @@
+@import '../../style/main.scss';
+
+.dashboard {
+  background: $secondary-color;
+
+  h2, form {
+    margin: 0 30px;
+  }
+}

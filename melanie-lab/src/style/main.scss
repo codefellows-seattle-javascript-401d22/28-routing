@@ -1,0 +1,24 @@
+@import 'reset';
+
+$font-stack: Avenir, sans-serif;
+$primary-color: #4c4c4c;
+$secondary-color: #e0e0e0;
+$tertiary-color: #999;
+
+header, div#root {
+  font: 100% $font-stack;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  background: $primary-color;
+  color: $tertiary-color;
+  padding: 2px 0;
+
+  h1 {
+    margin: 15px 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
