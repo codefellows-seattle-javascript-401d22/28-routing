@@ -17,24 +17,13 @@ class App extends React.Component {
     this.getApp = this.getApp.bind(this);
   }
 
-  getApp(){
-    return {
-      state: this.state,
-      setState: this.setState.bind(this)
-    }
-  }
-
-  componentDidUpdate() {
-    console.log('__STATE__', this.state);
-  }
-
   render(){
     return (
       <main>
         <BrowserRouter>
           <section>
             <Route exact path='/' component={Landing} />
-            <Route exact path='/dashboard' component={() => <Dashboard app={this.getApp()} />} />
+            <Route exact path='/dashboard' component={Dashboard} />
           </section>
         </BrowserRouter>
       </main>
