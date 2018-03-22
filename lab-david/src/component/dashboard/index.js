@@ -2,7 +2,7 @@
 
 import './_dashboard.scss';
 import React from 'react';
-import uuid from 'uuid/v1';
+import uuid from 'uuid/v4';
 
 import NoteForm from '../noteform';
 import NoteList from '../notelist';
@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
     return (
       <section className='dashboard'>
         <NoteForm handleCreateNote={this.createNote} />
-        {/* <NoteList app={this.getApp()} /> */}
+        <NoteList app={this.getApp()} />
       </section>
     )
   }
