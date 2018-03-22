@@ -14,4 +14,16 @@
     margin: 10px 10px;
     font-size: 14px;
   }
+  
+  button {
+    background: $primary-color;
+    color: $secondary-color;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 10px;
+    font-family: Avenir, sans-serif;
+    font-size: 15px;
+    width: 25%
+  }
+
 }

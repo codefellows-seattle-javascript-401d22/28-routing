@@ -10,7 +10,6 @@ export default class NoteForm extends Component {
       title: '',
       content: '',
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -42,7 +41,7 @@ export default class NoteForm extends Component {
           value={this.state.content}
           onChange={this.handleChange} />
 
-        <button type='submit'>add note</button>
+        <button type='submit'>{this.props.submitTitle}</button>
       </form>
     );
   }

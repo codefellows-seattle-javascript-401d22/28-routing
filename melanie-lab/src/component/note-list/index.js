@@ -15,10 +15,14 @@ export default class NoteList extends Component {
         {this.props.notes.length >= 1 ? 
           <section>
             <ul>
-              {this.props.notes.map((note, i) => {
+              {this.props.notes.map((note) => {
                 return (
-                  <li key={i}>
-                    <NoteItem title={note.title} content={note.content} id={note.id}/>
+                  <li key={note.id}>
+                    <NoteItem 
+                      title={note.title} 
+                      content={note.content} 
+                    />
+                    <button onClick={() => this.props.removeNote(note)}>remove note</button>
                   </li>
                 );
               }
