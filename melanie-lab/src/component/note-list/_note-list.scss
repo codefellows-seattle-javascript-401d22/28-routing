@@ -1,0 +1,17 @@
+@import '../../style/main.scss';
+
+.note-list {
+  border: 1.5px $primary-color solid;
+  background: $secondary-color;
+  margin: 10px 30px;
+  border-radius: 2px;
+
+  li {
+    display: block;
+  }
+
+  h4 {
+    margin: 10px 10px;
+    font-size: 14px;
+  }
+}
