@@ -1,6 +1,6 @@
 'use strict';
 
-import './landing.scss';
+import './_landing.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 
@@ -23,3 +23,5 @@ class Landing extends React.Component {
     )
   }
 }
+
+export default Landing;

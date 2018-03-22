@@ -11,12 +11,12 @@ import Dashboard from './component/dashboard';
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      notes: [],
-    }
-    this.getApp = this.getApp.bind(this);
   }
 
+  componentDidUpdate() {
+    console.log('__STATE__', this.state);
+  }
+  
   render(){
     return (
       <main>

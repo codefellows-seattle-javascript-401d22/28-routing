@@ -1,6 +1,6 @@
 'use strict';
 
-import './dashboard.scss';
+import './_dashboard.scss';
 import React from 'react';
 import uuid from 'uuid/v1';
 
@@ -14,6 +14,7 @@ class Dashboard extends React.Component {
       notes: [],
     }
     this.getApp = this.getApp.bind(this);
+    this.createNote = this.createNote.bind(this);
   }
 
   getApp(){
@@ -36,8 +37,10 @@ class Dashboard extends React.Component {
     return (
       <section className='dashboard'>
         <NoteForm handleCreateNote={this.createNote} />
-        <NoteList app={this.getApp()} />
+        {/* <NoteList app={this.getApp()} /> */}
       </section>
     )
   }
 }
+
+export default Dashboard;
