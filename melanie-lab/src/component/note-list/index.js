@@ -1,7 +1,8 @@
-// should display an <ul> of <NoteItem /> components
+'use strict';
 
 import './_note-list.scss';
 import React, { Component } from 'react';
+import NoteItem from '../note-item';
 
 export default class NoteList extends Component {
   constructor(props) {
@@ -14,12 +15,10 @@ export default class NoteList extends Component {
         {this.props.notes.length >= 1 ? 
           <section>
             <ul>
-              {console.log(this.props)}
               {this.props.notes.map((note, i) => {
                 return (
                   <li key={i}>
-                    <h3>{note.title}</h3>
-                    <p>{note.content}</p>
+                    <NoteItem title={note.title} content={note.content} id={note.id}/>
                   </li>
                 );
               }
@@ -27,7 +26,7 @@ export default class NoteList extends Component {
             </ul>
           </section>
           :
-          <h4>Womp womp. No notes here.</h4>
+          <h4>No notes found! You must be really productive.</h4>
         }
       </div>
     );

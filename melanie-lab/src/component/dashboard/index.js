@@ -24,7 +24,11 @@ export default class Dashboard extends Component {
   }
 
   removeNote(note) {
-    console.log(note);
+    this.setState({
+      note: this.state.notes.filter( note => {
+        note.id !== note.id;
+      }),
+    });
     // should have a bound removeNote(note) method that removes a note from state.notes based on its id
   }
 
@@ -33,7 +37,7 @@ export default class Dashboard extends Component {
       <div className='dashboard'>
         <h2>create a note.</h2>
         <NoteForm handleNoteCreate={this.addNote} />
-        
+
         <h2>notes.</h2>
         <NoteList notes={this.props.app.state.notes} />
       </div>

@@ -5,7 +5,7 @@ $primary-color: #4c4c4c;
 $secondary-color: #e0e0e0;
 $tertiary-color: #999;
 
-header, div#root {
+body {
   font: 100% $font-stack;
   max-width: 600px;
   margin: 0 auto;
@@ -21,4 +21,9 @@ header {
     font-weight: bold;
     font-size: 20px;
   }
+}
+
+footer {
+  background: $tertiary-color;
+  height: 75px;
 }

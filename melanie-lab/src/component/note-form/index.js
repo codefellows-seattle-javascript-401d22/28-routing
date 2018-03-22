@@ -32,17 +32,17 @@ export default class NoteForm extends Component {
         <input
           name='title'
           type='text'
-          placeholder='Note title'
+          placeholder='Title'
           value={this.state.title}
           onChange={this.handleChange} />
         <input
           name='content'
           type='text'
-          placeholder='Content here'
+          placeholder='Content'
           value={this.state.content}
           onChange={this.handleChange} />
 
-        <button type='submit'>Add Note</button>
+        <button type='submit'>add note</button>
       </form>
     );
   }
