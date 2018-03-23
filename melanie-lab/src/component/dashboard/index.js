@@ -6,6 +6,7 @@ import uuid from 'uuid/v1';
 
 import NoteForm from '../note-form';
 import NoteList from '../note-list';
+import NavBar from '../navbar';
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard'>
+        <NavBar />
         <h2>create a note.</h2>
         <NoteForm 
           handleNoteCreate={this.addNote}

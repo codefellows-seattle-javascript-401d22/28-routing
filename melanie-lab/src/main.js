@@ -8,12 +8,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './component/landing';
 import Dashboard from './component/dashboard';
 
-/*
-should manage frontend routes and should contain a <nav> (or a <Navbar /> component)
-the / route should display the <Landing /> component
-the /dashboard route should display the <Dashboard /> component
-*/
-
 class App extends Component {
   constructor(props) {
     super(props);

@@ -15,9 +15,8 @@ export default class NoteList extends Component {
     this.toggleModal = this.toggleModal.bind(this);
   }
 
-  // a lot of modal help from: https://daveceddia.com/open-modal-in-react/
+  // got a lot of modal help from: https://daveceddia.com/open-modal-in-react/
   toggleModal() {
-    console.log(this.state);
     this.setState({ showModal: !this.state.showModal });
   }
 

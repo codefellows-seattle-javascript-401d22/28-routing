@@ -8,4 +8,8 @@
     font-size: 16px;
     padding: 20px 30px;
   }
+
+  p:last-child {
+    padding-top: 0;
+  }
 }
