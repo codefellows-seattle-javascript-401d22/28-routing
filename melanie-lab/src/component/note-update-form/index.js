@@ -1,14 +1,15 @@
 'use strict';
 
-import './_note-form.scss';
+import './_note-update-form.scss';
 import React, { Component } from 'react';
 
-export default class NoteForm extends Component {
+export default class NoteUpdateForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      content: '',
-    };
+    
+    let content = props.note ? props.note.content : '';
+    this.state = { content };
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,12 +22,12 @@ export default class NoteForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleNoteCreate(this.state);
+    this.props.handleSubmit(this.state);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='note-update-form' onSubmit={this.handleSubmit}>
         <input
           name='content'
           type='text'
@@ -34,7 +35,7 @@ export default class NoteForm extends Component {
           value={this.state.content}
           onChange={this.handleChange} />
 
-        <button type='submit'>{this.props.submitTitle}</button>
+        <button className='update-button' type='submit'>{this.props.submitTitle}</button>
       </form>
     );
   }

@@ -11,18 +11,6 @@ body {
   margin: 0 auto;
 }
 
-header {
-  background: $primary-color;
-  color: $tertiary-color;
-  padding: 2px 0;
-
-  h1 {
-    margin: 15px 30px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-}
-
 footer {
   background: $tertiary-color;
   height: 75px;

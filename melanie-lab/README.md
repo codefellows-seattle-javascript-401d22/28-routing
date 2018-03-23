@@ -1,4 +1,4 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 28: Routing
+![cf](https://i.imgur.com/7v5ASc8.png) Lab 28: Routing & Lab 29: Component Composition
 ======
 
 ## Directory Structure
@@ -14,6 +14,7 @@
 * **src/** - contains frontend code
 * **src/index.html**
 * **src/main.js** - contains entire app
+* **src/components** - contains app components (see list below for all components)
 * **src/style**
 * **src/style/main.scss**
 
@@ -21,10 +22,24 @@
 1. To install this application, download the files from this repository
 2. `cd` to the repository directory and run `npm i`
 3. Use `npm run watch` to run the app locally
+4. Navigate to `localhost:<PORT>/dashboard` or `localhost:<PORT>/landing` to explore the app
 
-<!-- 
 ## Application Details
-* This app uses `React` and is comprised of three main components:
-  1. `<App />` - contains the application state and methods for modifying this state
-  2. `<SearchForm />` - contains input fields for the user
-  3. `<SearchResultList />` - renders result list for user -->
+* This app uses `React` and is comprised of the following components:
+```
+<App />
+  <NavBar />
+  <Landing />
+  <Dashboard />
+    <NoteForm />
+    <NoteList />
+      <NoteItem />
+        <Modal />
+        <NoteUpdateForm />
+```
+* With the app, a user can:
+  * **Add** a note & subsequently view the note in the 'notes' section
+  * **Update** an existing note by clicking the 'Update' button
+    * Update the note's text within the modal
+    * Cancel out of the update modal
+  * **Delete** an existing note by clicking the 'X' button to the right of the 'Update' button

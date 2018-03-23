@@ -1,31 +1,11 @@
 @import '../../style/main.scss';
 
-.note-list {
-  display: block;
-
-  div.note {
-    display: inline-block;
-    width: 70%;
-  }
+.note-item {
+  display: inline-block;
+  width: 69%;
 
   h3 {
     margin: 0 10px;
     display: inline-block;
-  }
-
-  p {
-    display: inline-block;
-  }
-
-  button {
-    background: $primary-color;
-    color: $secondary-color;
-    border-radius: 4px;
-    border: none;
-    padding: 5px 15px;
-    margin: 10px;
-    font-family: Avenir, sans-serif;
-    font-size: 15px;
-    width: 25%
   }
 }
