@@ -10,7 +10,7 @@ class NoteItem extends React.Component{
       editing: false,
       completed: false,
       content: this.props.content,
-      id: this.props.id,
+      noteId: this.props.noteId,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,16 +23,16 @@ class NoteItem extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.handleUpdateNote(this.state.id, this.state.content);
+    this.props.handleUpdateNote(this.state.noteId, this.state.content);
   }
 
   handleDelete(e){
-    this.props.handleDeleteNote(this.state.id);
+    this.props.handleDeleteNote(this.state.noteId);
   }
 
   render(){
     return (
-      <li key={this.props.n} className='noteitem'>
+      <li key={this.props.n} data={this.props.noteId} className='noteitem'>
         <form onSubmit={this.handleSubmit}>
           <p>{this.props.content}</p>
           <input name='content' type='text' value={this.state.content} onChange={this.handleChange} />

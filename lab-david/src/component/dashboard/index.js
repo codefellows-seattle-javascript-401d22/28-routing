@@ -2,7 +2,7 @@
 
 import './_dashboard.scss';
 import React from 'react';
-import uuid from 'uuid/v4';
+import uuid from 'uuid/v1';
 
 import NoteForm from '../noteform';
 import NoteList from '../notelist';
@@ -10,18 +10,7 @@ import NoteList from '../notelist';
 class Dashboard extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      notes: [],
-    }
-    this.getApp = this.getApp.bind(this);
     this.createNote = this.createNote.bind(this);
-  }
-
-  getApp(){
-    return {
-      state: this.state,
-      setState: this.setState.bind(this)
-    }
   }
 
   componentDidUpdate() {
@@ -29,15 +18,18 @@ class Dashboard extends React.Component {
   }
 
   createNote(note){
-    note.id = uuid();
-    this.setState(state => ({notes: [...state.notes, note]}));
+    note.noteId = uuid();
+    let {app} = this.props;
+    console.log('createNoteId:', note.noteId);
+    app.setState(state => ({
+      notes: state.notes.concat([note])}));
   }
 
   render(){
     return (
       <section className='dashboard'>
         <NoteForm handleCreateNote={this.createNote} />
-        <NoteList app={this.getApp()} />
+        <NoteList app={this.props.app} />
       </section>
     )
   }

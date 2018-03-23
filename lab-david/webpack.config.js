@@ -26,7 +26,7 @@ module.exports = {
         loader: 'babel-loader'
       },{
         test: /\.scss$/,
-        loader: ExtractPlugin.extract(['css-loader', 'sass-loader'])
+        loader: 'style-loader!css-loader!sass-loader',
       }
     ]
   }

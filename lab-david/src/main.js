@@ -11,6 +11,17 @@ import Dashboard from './component/dashboard';
 class App extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      notes: []
+    }
+    this.getApp = this.getApp.bind(this);
+  }
+
+  getApp(){
+    return {
+      state: this.state,
+      setState: this.setState.bind(this)
+    }
   }
 
   componentDidUpdate() {
@@ -23,7 +34,7 @@ class App extends React.Component {
         <BrowserRouter>
           <section>
             <Route exact path='/' component={Landing} />
-            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/dashboard' component={() => <Dashboard app={this.getApp()}/>} />
           </section>
         </BrowserRouter>
       </main>
