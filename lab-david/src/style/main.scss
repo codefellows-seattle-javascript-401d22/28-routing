@@ -1,0 +1,31 @@
+@import 'reset';
+@import '../component/notelist/notelist';
+@import '../component/noteitem/noteitem';
+@import '../component/noteform/noteform';
+@import '../component/landing/landing';
+@import '../component/dashboard/dashboard';
+
+$width: 960px;
+
+* {
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+h2 {
+  padding: 10px;
+  background: grey;
+}
+
+main {
+  border: black 3px solid;
+  width: $width;
+}
+
+form {
+  width: 80%;
+  border: orange 3px solid;
+}
