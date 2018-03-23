@@ -7,7 +7,6 @@ export default class NoteForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
       content: '',
     };
     this.handleChange = this.handleChange.bind(this);
@@ -28,12 +27,6 @@ export default class NoteForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input
-          name='title'
-          type='text'
-          placeholder='Title'
-          value={this.state.title}
-          onChange={this.handleChange} />
         <input
           name='content'
           type='text'

@@ -19,11 +19,17 @@
     background: $primary-color;
     color: $secondary-color;
     border-radius: 4px;
-    padding: 5px 15px;
-    margin: 10px;
+    padding: 5px 10px;
+    margin: 10px 3px;
     font-family: Avenir, sans-serif;
     font-size: 15px;
-    width: 25%
+    width: 20%;
   }
-
+  
+  button.remove-button {
+    float: right;
+    width: 7%;
+    padding: 5px 1px;
+    margin-right: 10px;
+  }
 }

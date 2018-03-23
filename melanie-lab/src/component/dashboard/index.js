@@ -57,7 +57,6 @@ export default class Dashboard extends Component {
           removeNote={this.removeNote}
           notes={this.props.app.state.notes} 
         />
-        
       </div>
     );
   }
