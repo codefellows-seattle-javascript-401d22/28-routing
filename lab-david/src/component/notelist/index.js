@@ -20,13 +20,13 @@ class NoteList extends React.Component{
         handleUpdateNote={this.updateNote}
         key={n}
         content={note.content} 
-        id={note.id}/>
+        noteId={note.noteId}/>
     })
   }
 
   deleteNote(id){
     if(this.props.app.state.notes.length > 1){
-      let newNotes = this.props.app.state.notes.filter(note => note.id !== id);
+      let newNotes = this.props.app.state.notes.filter(note => note.noteId !== id);
       this.props.app.setState(state => ({notes: newNotes}));
     } else {
       this.props.app.setState(state => ({notes: []}));
@@ -34,13 +34,15 @@ class NoteList extends React.Component{
   }
 
   updateNote(id, content){
-    this.props.app.setState(state => {
-      state.notes.forEach(note => {
-        if(note.id === id){
+    this.props.app.setState(prevState => {
+      console.log('prevState', prevState);
+      let newState = prevState.notes.map(note => {
+        if(note.noteId === id){
           note.content = content;
         }
       });
-      return state;
+      console.log('newState', newState);
+      return newState;
     })
   }
   
