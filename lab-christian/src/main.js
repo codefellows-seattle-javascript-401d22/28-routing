@@ -5,6 +5,7 @@ import ReactDom from 'react-dom';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 import Landing from '../src/component/landing/landing';
+import Dashboard from '../src/component/dashboard/dashboard';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <section>
-            <Route exact path='/' component={Landing} />
-            <Route exact path='/dashboard' component={Landing} />
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/dashboard' component={Dashboard} />
           </section>
         </BrowserRouter>
       </main>

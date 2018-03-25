@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import NoteForm from '';
-import NoteItem from '';
-import NoteList from '';
+import NoteForm from '../noteform/noteform';
+// import NoteItem from '';
+// import NoteList from '';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class Dashboard extends React.Component {
     this.state = {
       notes: [],
     }
+    this.addNote = this.addNote.bind(this);
   }
 
   addNote(note) {
@@ -20,9 +21,11 @@ class Dashboard extends React.Component {
   }
 
   render() {
+    console.log('__STATE__: ', this.state)
     return (
       <div className="dashboard">
         <p>Dashboard</p>
+        <NoteForm handleNoteCreate={this.addNote}/>
       </div>
     )
   }
