@@ -8,9 +8,8 @@ class NoteList extends React.Component {
     return(
       <section className='note-list'>
         <ul>
-          {console.log('props in notelist', this.props.notes)}
           {this.props.notes.map( item => 
-            <NoteItem note={item} key={item.id} removeNote={this.props.removeNote}/>
+            <NoteItem note={item} key={item.id} updateNote={this.props.updateNote} editNote={this.props.editNote} app={this.props.app} removeNote={this.props.removeNote}/>
           )}
         </ul>
       </section>

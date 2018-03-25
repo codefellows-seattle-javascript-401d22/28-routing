@@ -19,11 +19,14 @@ class Dashboard extends React.Component {
     this.addNote = this.addNote.bind(this);
     this.removeNote = this.removeNote.bind(this);
     this.getApp = this.getApp.bind(this);
+    this.updateNote = this.updateNote.bind(this);
+    this.editNote = this.editNote.bind(this);
   }
 
   getApp() {
     return {
       state: this.state,
+      setState: this.setState.bind(this)
     }
   }
 
@@ -43,6 +46,26 @@ class Dashboard extends React.Component {
     });
   }
 
+  editNote(id) {
+    this.setState(state => {
+      notes: state.notes.map(note => {
+        return note.id === id ? note.editing = true : note.editing = false;
+      })
+    }, () => {
+      console.log(this.state.notes);
+    })
+  }
+
+  updateNote(_note) {
+    this.setState(state => ({
+      notes: state.notes.map(note => {
+        console.log('note.id', note.id);
+        console.log('_note.id', _note.id);
+        return note.id === _note.id ? note : _note;
+      })
+    }));
+  }
+
   removeNote(id) {
     this.setState(state => ({
       notes: state.notes.filter(item => {
@@ -56,7 +79,7 @@ class Dashboard extends React.Component {
       <section>
         <NavBar />
         <NoteForm addNote={this.addNote} />
-        <NoteList notes={this.state.notes} removeNote={this.removeNote}/>
+        <NoteList notes={this.state.notes} app={this.getApp} editNote={this.editNote} updateNote={this.updateNote} removeNote={this.removeNote}/>
       </section>
     )
   }
