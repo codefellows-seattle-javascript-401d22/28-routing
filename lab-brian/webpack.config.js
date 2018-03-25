@@ -11,6 +11,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     // accounts for unregistered 404 routes, allows you to use the back button
+    // enables client side routing
   },
   entry: `${__dirname}/src/main.js`,
   // entry point of my app
@@ -18,7 +19,7 @@ module.exports = {
     path: `${__dirname}/build`,
     // where build is compiled to
     publicPath: '/',
-    // base path for all assets in my app
+    // base path for all assets in my app; serves all files inside of public path as part of my appo
     filename: 'bundle-[hash].js',
     // names bundled files, all have same hash
   },
