@@ -2,8 +2,7 @@
 
 import React from 'react';
 import NoteForm from '../noteform/noteform';
-// import NoteItem from '';
-// import NoteList from '';
+import NoteList from '../notelist/notelist';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -20,12 +19,21 @@ class Dashboard extends React.Component {
     });
   }
 
+  removeNote(id) {
+    this.setState((prevState) => {
+      notes: prevState.notes.filter((item) => {
+        return item.id !== id;
+      });
+    });
+  }
+
   render() {
     console.log('__STATE__: ', this.state)
     return (
       <div className="dashboard">
         <p>Dashboard</p>
         <NoteForm handleNoteCreate={this.addNote}/>
+        <NoteList notes={this.state.notes} />
       </div>
     )
   }
