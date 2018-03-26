@@ -29,10 +29,8 @@ class NoteUpdateForm extends React.Component {
 
   onComplete(e) {
     e.preventDefault();
-    this.props.handleNoteUpdate({
-      title: this.state.title,
-      content: this.state.content,
-    });
+    this.props.handleNoteUpdate(this.state.title, this.state.content);
+    this.props.switchMode('default');
   }
 
   render() {

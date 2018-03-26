@@ -10,7 +10,9 @@ class Dashboard extends React.Component {
     this.state = {
       notes: [],
     }
+
     this.addNote = this.addNote.bind(this);
+    this.updateNote = this.updateNote.bind(this);
     this.removeNote = this.removeNote.bind(this);
   }
 
@@ -48,7 +50,7 @@ class Dashboard extends React.Component {
       <div className="dashboard">
         <p>Dashboard</p>
         <NoteForm handleNoteCreate={this.addNote}/>
-        <NoteList notes={this.state.notes} removeNote={this.removeNote} />
+        <NoteList notes={this.state.notes} removeNote={this.removeNote} updateNote={this.updateNote}/>
       </div>
     )
   }

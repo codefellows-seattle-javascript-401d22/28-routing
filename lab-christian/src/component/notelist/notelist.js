@@ -14,7 +14,7 @@ class NoteList extends React.Component {
   renderNotes() {
     return this.props.notes.map((item, i) => {
       return(
-        <NoteItem title={item.title} content={item.content} id={item.id} removeNote={this.props.removeNote}/>
+        <NoteItem title={item.title} content={item.content} id={item.id} removeNote={this.props.removeNote} updateNote={this.props.updateNote}/>
       );
     });
   };
