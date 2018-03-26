@@ -1,0 +1,30 @@
+.todo-form {
+  margin: 15px;
+}
+.todo-form input {
+  border-radius: 3px;
+  border: 1.4px solid #4a4a4a;
+  height: 22px;
+  width: calc(100% - 15px);
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-weight: 100;
+  font-size: 14px;
+  outline: none;
+}
+.todo-form button {
+  border-radius: 3px;
+  border: 1.4px solid #4a4a4a;
+  background: #4a4a4a;
+  color: #FFF;
+  font-weight: 100;
+  line-height: 18.76px;
+  padding: 2.6px 20px;
+  width: calc(100% - 1px);
+}
+::-moz-placeholder {
+  color: #d7d7d7;
+}
+::-webkit-input-placeholder {
+  color: #d7d7d7;
+}
