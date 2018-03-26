@@ -7,36 +7,36 @@ class NoteCreateForm extends React.Component{
   constructor(props){
     super(props);
 
-    let content = props.note ? props.note.content : '';
+    let content = props.note ? props.note : '';
+    let noteId = props.noteId ? props.noteId : '';
 
-    this.state = { content }
+    this.state = { content, noteId }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e){
-    this.setState({[e.target.name]: e.target.value});
-    console.log('formState', this.state);
+    this.setState({[e.target.name]: e.target.value}, () => console.log('handleChange', this.state));
+
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.handleCreateNote(this.state);
-    console.log('submitState', this.state);
+    console.log('handleSubmit', this.state);
+    this.props.handleNote(this.state);
   }
 
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-        <h2>create a note.</h2>
         <input
           name='content'
           type='text'
           value={this.state.content}
           onChange={this.handleChange}
         />
-        <button type='submit'>add note</button>
+        <button type='submit'>{this.props.buttonTitle}</button>
       </form>
     )
   }

@@ -33,13 +33,17 @@ class NoteList extends React.Component{
     }
   }
 
-  updateNote(id, content){
+  updateNote(noteUpdate){
     this.props.app.setState(prevState => {
-      console.log('prevState', prevState);
-      let newState = prevState.notes.map(note => {
-        if(note.noteId === id){
-          note.content = content;
+      let newState = {
+        notes: [],
+      }
+      console.log('noteUpdate', noteUpdate);
+      prevState.notes.map(note => {
+        if(note.noteId === noteUpdate.noteId){
+          note.content = noteUpdate.content;
         }
+        newState.notes.push(note);
       });
       console.log('newState', newState);
       return newState;
@@ -50,6 +54,7 @@ class NoteList extends React.Component{
     const displayList = this.displayNoteList();
     return (
       <div className='notelist'>
+        <h2>notes.</h2>
         <ul>{displayList}</ul>
       </div>
     )

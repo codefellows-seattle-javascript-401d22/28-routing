@@ -5,7 +5,7 @@
 @import '../component/landing/landing';
 @import '../component/dashboard/dashboard';
 
-$width: 960px;
+$width: 660px;
 
 * {
   padding: 10px;
@@ -13,11 +13,22 @@ $width: 960px;
 
 p {
   padding: 10px;
+  float: left;
+  width: 500px;
+}
+
+h1 {
+  padding: 10px;
+  background: #444;
+  color: #999;
 }
 
 h2 {
   padding: 10px;
-  background: grey;
+}
+
+body {
+  background: lightgrey;
 }
 
 main {
@@ -25,7 +36,26 @@ main {
   width: $width;
 }
 
-form {
-  width: 80%;
-  border: orange 3px solid;
+ul {
+  border: black 2px solid;
+}
+
+li {
+  margin: 5px;
+
+}
+
+input {
+  width: 500px;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 7px;
+}
+
+button {
+  background: #444;
+  border-radius: 8px;
+  color: #999;
+  width: 100px;
+  padding: 7px;
 }
