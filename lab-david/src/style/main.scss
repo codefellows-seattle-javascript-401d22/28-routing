@@ -1,0 +1,61 @@
+@import 'reset';
+@import '../component/notelist/notelist';
+@import '../component/noteitem/noteitem';
+@import '../component/noteform/noteform';
+@import '../component/landing/landing';
+@import '../component/dashboard/dashboard';
+
+$width: 660px;
+
+* {
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+  float: left;
+  width: 500px;
+}
+
+h1 {
+  padding: 10px;
+  background: #444;
+  color: #999;
+}
+
+h2 {
+  padding: 10px;
+}
+
+body {
+  background: lightgrey;
+}
+
+main {
+  border: black 3px solid;
+  width: $width;
+}
+
+ul {
+  border: black 2px solid;
+}
+
+li {
+  margin: 5px;
+
+}
+
+input {
+  width: 500px;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 7px;
+}
+
+button {
+  background: #444;
+  border-radius: 8px;
+  color: #999;
+  width: 100px;
+  padding: 7px;
+}
