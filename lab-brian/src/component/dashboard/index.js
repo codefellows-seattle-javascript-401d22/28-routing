@@ -57,12 +57,12 @@ class Dashboard extends React.Component {
       <section className='dashboard-container'>
         <Navbar />
 
-        <div>
+        {/* <div>
           <p> Todos Left: {app.state.todoCount} </p>
           <p> Todos Completed: {app.state.todoDone} </p>
-          % done: {}
-        </div>
-
+          <p> % done: {} </p>
+        </div> */}
+        <p className='title'>create a note.</p>
         <TodoForm handleSubmit={this.todoCreate} submitTitle='add note'/>
         <TodoList todoRemove={this.todoRemove} todoUpdate={this.todoUpdate} todos={app.state.todos} />
 

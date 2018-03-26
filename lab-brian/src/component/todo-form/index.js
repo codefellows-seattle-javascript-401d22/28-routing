@@ -1,3 +1,6 @@
+'use strict';
+
+import './_todo-form.scss';
 import React from 'react';
 
 class TodoForm extends React.Component {
@@ -34,12 +37,14 @@ class TodoForm extends React.Component {
           type='text'
           value={this.state.title}
           onChange={this.handleChange}
+          placeholder='title...'
         />
         <input
           name='content'
           type='text'
           value={this.state.content}
           onChange={this.handleChange}
+          placeholder='details...'
         />
         <button type='submit'>{this.props.submitTitle}</button>
       </form>

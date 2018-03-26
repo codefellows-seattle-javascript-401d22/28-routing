@@ -1,5 +1,6 @@
 'use strict';
 
+import './_todo-list.scss';
 import React from 'react';
 import TodoForm from '../todo-form';
 
@@ -7,14 +8,15 @@ class TodoList extends React.Component {
   render() {
     return (
       <section className='todo-list'>
+        <p className='title'>notes. </p>
         <ul>
           {this.props.todos.map((item, i) => {
             return <li key={i}>
-              <button onClick={() => this.props.todoRemove(item)}>X</button>
+              <button className='removeButton' onClick={() => this.props.todoRemove(item)}>X</button>
 
               <div>
-                <p>title: {item.title}</p>
-                <p>content: {item.content} </p>
+                <p className='capitalize'> {item.title}</p>
+                <p> - {item.content} </p>
               </div>
 
               <TodoForm
