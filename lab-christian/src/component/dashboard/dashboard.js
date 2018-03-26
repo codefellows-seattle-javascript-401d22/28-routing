@@ -28,6 +28,20 @@ class Dashboard extends React.Component {
     }});
   }
 
+  updateNote(id, title, content) {
+    this.setState((prevState)=>{
+      return {
+        notes: prevState.notes.map((item) => {
+          if (item.id === id) {
+            return {id: id, title: title, content: content};
+          } else {
+            return item;
+          }
+        })
+      }
+    })
+  }
+
   render() {
     console.log('__STATE__: ', this.state)
     return (
