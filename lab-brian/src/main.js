@@ -6,18 +6,14 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-import LandingContainer from './component/landing-container';
-// import NavbarContainer from './component/navbar-container';
-import DashboardContainer from './component/dashboard-container';
-// import NoteFormContainer from './component/noteForm-container';
-// import NoteItemContainer from './component/noteItem-container';
-// import NoteListContainer from './component/noteList-container';
+import Dashboard from './component/dashboard';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       todoCount: 0,
+      todoDone: 0,
       todos: [],
     };
     this.getApp=this.getApp.bind(this);
@@ -39,8 +35,8 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <section>
-            <Route exact path='/' component={LandingContainer} />
-            <Route exact path='/dashboard' component={() => <DashboardContainer app={this.getApp()} />} />
+            {/* <Route exact path='/' component={LandingContainer} /> */}
+            <Route exact path='/' component={() => <Dashboard app={this.getApp()} />} />
           </section>
         </BrowserRouter>
       </main>
