@@ -2,6 +2,7 @@
 
 import './_noteitem.scss';
 import React from 'react';
+import NoteForm from '../noteform';
 
 class NoteItem extends React.Component{
   constructor(props){
@@ -21,9 +22,8 @@ class NoteItem extends React.Component{
     this.setState({[e.target.name]: e.target.value});
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    this.props.handleUpdateNote(this.state.noteId, this.state.content);
+  handleSubmit(note){
+    this.props.handleUpdateNote(note);
   }
 
   handleDelete(e){
@@ -33,12 +33,18 @@ class NoteItem extends React.Component{
   render(){
     return (
       <li key={this.props.n} data={this.props.noteId} className='noteitem'>
-        <form onSubmit={this.handleSubmit}>
-          <p>{this.props.content}</p>
-          <input name='content' type='text' value={this.state.content} onChange={this.handleChange} />
-          <button type='submit'>Update</button>
-          <button onClick={this.handleDelete}>Delete</button>
-        </form>
+        { !this.state.editing ?
+          <div onClick={() => this.setState({editing: true})}>
+            <p>{this.props.content}</p>
+            <button onClick={this.handleDelete}>Delete</button>
+          </div>
+          :
+          <NoteForm 
+            note={this.state.content}
+            noteId={this.state.noteId}
+            handleNote={this.handleSubmit}
+            buttonTitle='update note' />
+        }
       </li>
     )
   }

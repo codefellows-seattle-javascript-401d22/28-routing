@@ -28,7 +28,9 @@ class Dashboard extends React.Component {
   render(){
     return (
       <section className='dashboard'>
-        <NoteForm handleCreateNote={this.createNote} />
+        <h1>note keeper</h1>
+        <h2>create a note.</h2>
+        <NoteForm handleNote={this.createNote} buttonTitle='add note'/>
         <NoteList app={this.props.app} />
       </section>
     )
