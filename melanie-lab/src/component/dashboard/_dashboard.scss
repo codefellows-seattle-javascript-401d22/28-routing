@@ -1,0 +1,37 @@
+@import '../../style/main.scss';
+
+.dashboard {
+  background: $secondary-color;
+  padding-bottom: 20px;
+
+  h2 {
+    margin: 0 30px;
+    display: block;
+    font-size: 20px;
+    color: $primary-color;
+    padding: 30px 0 5px 0;
+  }
+
+  input {
+    border: 1.5px solid $primary-color;
+    border-radius: 4px;
+    padding: 8px;
+    width: 30%
+  }
+  
+  input:first-child {
+    margin-right: 10px;
+  }
+
+  button {
+    background: $primary-color;
+    color: $secondary-color;
+    border-radius: 4px;
+    border: none;
+    padding: 5.5px 15px;
+    margin: 10px;
+    font-family: Avenir, sans-serif;
+    font-size: 15px;
+    width: 20%
+  }
+}

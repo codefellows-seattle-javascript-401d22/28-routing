@@ -1,0 +1,11 @@
+@import '../../style/main.scss';
+
+.note-item {
+  display: inline-block;
+  width: 69%;
+
+  h3 {
+    margin: 0 10px;
+    display: inline-block;
+  }
+}

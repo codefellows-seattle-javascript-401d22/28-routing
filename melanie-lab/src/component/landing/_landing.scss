@@ -1,0 +1,15 @@
+@import '../../style/main.scss';
+
+.landing {
+  background: $secondary-color;
+  
+  p {
+    background: $secondary-color;
+    font-size: 16px;
+    padding: 20px 30px;
+  }
+
+  p:last-child {
+    padding-top: 0;
+  }
+}

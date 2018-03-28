@@ -1,0 +1,35 @@
+@import '../../style/main.scss';
+
+.note-list {
+  border: 1.5px $primary-color solid;
+  background: $secondary-color;
+  margin: 10px 30px;
+  border-radius: 2px;
+
+  li {
+    display: block;
+  }
+
+  h4 {
+    margin: 10px 10px;
+    font-size: 14px;
+  }
+  
+  button {
+    background: $primary-color;
+    color: $secondary-color;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 10px 3px;
+    font-family: Avenir, sans-serif;
+    font-size: 15px;
+    width: 20%;
+  }
+  
+  button.remove-button {
+    float: right;
+    width: 7%;
+    padding: 5px 1px;
+    margin-right: 10px;
+  }
+}
