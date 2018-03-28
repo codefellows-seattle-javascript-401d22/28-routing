@@ -12,7 +12,7 @@ export default class NavBar extends Component {
         <nav>
           <ul>
             <li><Link to='/dashboard'>Dashboard</Link></li>
-            <li><Link to='/landing'>About</Link></li>
+            <li><Link to='/'>About</Link></li>
           </ul>
         </nav>
       </header>

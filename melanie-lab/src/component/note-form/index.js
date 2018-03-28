@@ -26,7 +26,7 @@ export default class NoteForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='note-form' onSubmit={this.handleSubmit}>
         <input
           name='content'
           type='text'

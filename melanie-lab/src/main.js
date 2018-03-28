@@ -34,6 +34,7 @@ class App extends Component {
       <main>
         <BrowserRouter>
           <section>
+            <Route exact path='/' component={Landing} />
             <Route exact path='/landing' component={Landing} />
             <Route exact path='/dashboard' component={() => 
               <Dashboard app={this.getApp()} />

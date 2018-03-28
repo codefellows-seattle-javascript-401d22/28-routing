@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
 }
 
+a, button {
+  cursor: pointer;
+}
+
 footer {
   background: $tertiary-color;
   height: 75px;
