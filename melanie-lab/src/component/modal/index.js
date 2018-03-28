@@ -10,10 +10,10 @@ export default class Modal extends Component {
     } else {
       return (
         <section className='modal'>
-          <main>
+          <div>
             {this.props.children}
             <button className='modal-button' onClick={this.props.onClose}>cancel</button>
-          </main>
+          </div>
         </section>
       );
     }

@@ -1,14 +1,15 @@
 @import '../../style/main.scss';
 
 .modal {
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.7);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 
-  main {
+  div {
+    display: block;
     background: $secondary-color;
     margin: 150px auto;
     max-width: 600px;
@@ -17,7 +18,7 @@
   }
 
   .modal-button {
-    float: right;
+    display: inline-block;
     width: 21%;
     margin-top: 30px;
     margin-left: 0;
