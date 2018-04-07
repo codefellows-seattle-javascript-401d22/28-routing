@@ -30,6 +30,7 @@ export default class NoteList extends Component {
                 return (
                   <li key={note.id}>
                     <NoteItem 
+                      title={note.title}
                       content={note.content} 
                     />
                     <button onClick={this.toggleModal}>update</button>
