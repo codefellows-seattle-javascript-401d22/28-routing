@@ -2,45 +2,64 @@
 
 import React from 'react';
 import uuid from 'uuid';
-import NoteForm from '../note-form';
-import NoteList from '../note-list';
 
-class Dashboard extends React.Component {
+import NoteForm from '../note-form/index.js';
+import NoteList from '../note-list/index.js';
+import NavBar from '../navbar/index.js';
+
+class Dashboard extends Component {
   constructor(props) {
     super(props);
 
     this.newNote = this.newNote.bind(this);
+    this.editNote = this.editNote.bind(this);
     this.deleteNote = this.deleteNote.bind(this);
   }
 
   newNote(note) {
-    note.completed = false;
-    note.editing = false;
     note.id = uuid();
+    note.editing = false;
+    note.completed = false;
+    
     this.props.app.setState(state => ({
       notes: [...state.notes, note],
     }));
   }
+  
+  editNote(note) {
+    this.props.app.setState(prevState => ({
+      notes: prevState.notes.map( item => {
+        return item.id === note.id ? note : item;
+      }),
+    }));
+  }
 
   deleteNote(note) {
-    this.setState({
-      note: this.state.notes.filter( note => {
-        note.id !== note.id;
+    this.props.app.setState(prevState => ({
+      notes: prevState.notes.filter( item => {
+        return item.id !== note.id;
       }),
-    });
+    }));
   }
 
   render() {
     return (
       <div className='dashboard'>
-        <h2>Add a Note</h2>
-        <NoteForm handleNoteCreate={this.newNote} />
+        <NavBar />
+        <h2>create a note.</h2>
+        <NoteForm 
+          handleNoteCreate={this.newNote}
+          submitTitle='add note'
+        />
 
-        <h3>Notes</h3>
-        <NoteList notes={this.props.app.state.notes} />
+        <h2>notes.</h2>
+        <NoteList 
+          editNote={this.editNote}
+          deleteNote={this.deleteNote}
+          notes={this.props.app.state.notes} 
+        />
       </div>
     );
   }
 }
-
 export default Dashboard;
