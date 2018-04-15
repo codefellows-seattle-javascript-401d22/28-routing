@@ -17,7 +17,7 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <section>
-          <Route exact path='/' component={Dashboard} />
+          <Route exact path='/' component={Landing} />
           <Route exact path='/dashboard' component={Dashboard} />
           </section>
         </BrowserRouter>
