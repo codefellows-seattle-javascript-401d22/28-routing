@@ -24,7 +24,7 @@
 * Run `npm run watch` to serve up a localhost instance with webpack
 * Go to `localhost:8080` to see the local website
 
-* This app was made using `React` and `Redux`.
+* This app was made using `React`.
 
 ## Dependencies:
 "babel-core": "^6.26.0",
