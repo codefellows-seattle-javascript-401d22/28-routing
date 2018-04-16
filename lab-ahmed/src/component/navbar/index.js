@@ -3,11 +3,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class NavBar extends Component {
+class NavBar extends React.Component {
   render() {
     return (
       <header>
-        <h1>note keeper</h1>
+        <h1>note tracker</h1>
         <nav>
           <ul>
             <li><Link to='/dashboard'>Dashboard</Link></li>

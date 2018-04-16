@@ -4,10 +4,10 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Landing from './component/landing/inex.js';
+import Landing from './component/landing/index.js';
 import Dashboard from './component/dashboard/index.js';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

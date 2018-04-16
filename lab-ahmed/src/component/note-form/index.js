@@ -1,9 +1,8 @@
 'use strict';
 
-
 import React from 'react';
 
-class NoteForm extends Component {
+class NoteForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

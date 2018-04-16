@@ -3,7 +3,7 @@
 import React from 'react';
 import NoteItem from '../note-item';
 
-class NoteList extends Component {
+class NoteList extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,7 +25,7 @@ class NoteList extends Component {
             </ul>
           </section>
           :
-          <h4> Woops no notes </h4>
+          <h4> There are no notes! </h4>
         }
       </div>
     );

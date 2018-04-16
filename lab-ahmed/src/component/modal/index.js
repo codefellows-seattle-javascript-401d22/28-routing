@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-class Modal extends Component {
+class Modal extends React.Component {
   render() {
     if (!this.props.show) {
       return null;

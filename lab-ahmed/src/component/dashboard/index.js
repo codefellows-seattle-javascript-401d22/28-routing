@@ -7,7 +7,7 @@ import NoteForm from '../note-form/index.js';
 import NoteList from '../note-list/index.js';
 import NavBar from '../navbar/index.js';
 
-class Dashboard extends Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
 

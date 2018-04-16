@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import NavBar from '../navbar/index.js'
+import NavBar from '../navbar/index.js';
 
-class Landing extends Component {
+class Landing extends React.Component {
   render() {
     return (
       <div className='landing'>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-class NoteUpdateForm extends Component {
+class NoteUpdateForm extends React.Component {
   constructor(props) {
     super(props);
     
