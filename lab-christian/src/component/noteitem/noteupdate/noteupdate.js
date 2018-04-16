@@ -51,7 +51,7 @@ class NoteUpdateForm extends React.Component {
             onChange={this.handleChange}
           />
 
-          <button type='submit'>Add Note</button>
+          <button type='submit'>Update</button>
           <button onClick={this.cancelNote}>Cancel</button>
         </form>
       </section>
